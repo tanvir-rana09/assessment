@@ -2,12 +2,12 @@ import Navbar from "./Navbar";
 
 const Header = () => {
     return (
-        <div className="bg-blue px-5 py-2">
+        <div className="w-full bg-bluex px-5 py-3">
             <div>
                 <Navbar />
             </div>
             <div>
-                <h2 className="text-3xl uppercase font-semibold flex justify-center items-center text-yellow ">Teachers Profile</h2>
+                <h2 className="text-4xl uppercase font-semibold flex justify-center items-center text-yellowx mt-5">Teachers Profile</h2>
             </div>
         </div>
     );
