@@ -1,17 +1,15 @@
-import Belts from "@/components/Belts";
-import Students from "@/components/Students";
+import Sidebar from "@/components/Sidebar";
+import Aside from "@/components/aside/Aside";
 
 export default function Home() {
-    
     return (
-        <main className="bg-whitex ">
-            <h2 className="uppercase text-4xl font-semibold">Student</h2>
-            <div>
-                <Belts/>
+        <div className="bg-whitex h-screen flex xl:px-[5%] w-full lg:gap-5 2xl:px-[10%] 3xl:px-[15%] lg:p-5 p-2">
+            <div className="">
+                <Sidebar />
             </div>
-            <div className="mt-20">
-                <Students/>
+            <div className="w-full">
+                <Aside />
             </div>
-        </main>
+        </div>
     );
 }

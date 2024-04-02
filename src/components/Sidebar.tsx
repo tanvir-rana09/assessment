@@ -1,87 +1,46 @@
+"use client";
 import Profile from "./Profile";
-// import Education from "@/assests/icons/Education.png";
-// import Graduate from "@/assests/icons/Graduate.png";
-// import Students from "@/assests/icons/Group-1.png";
-// import Attendences from "@/assests/icons/Group-2.png";
-// import Exam from "@/assests/icons/Exam.png";
-// import Notification from "@/assests/icons/Group.png";
-// import User from "@/assests/icons/User.png";
-// import Setting from "@/assests/icons/Gear.png";
-// import SignOut from "@/assests/icons/Frame.png";
-import { FaGraduationCap } from "react-icons/fa6";
-import { FaLaptopHouse } from "react-icons/fa";
-import { HiMiniUserGroup } from "react-icons/hi2";
-import { FaUserCheck } from "react-icons/fa";
-import { PiExamFill } from "react-icons/pi";
-import { MdNotificationsActive } from "react-icons/md";
-import { FaCircleUser } from "react-icons/fa6";
-import { IoSettingsSharp } from "react-icons/io5";
-import { CgLogOut } from "react-icons/cg";
+import { HiMiniBars3BottomLeft } from "react-icons/hi2";
+import { sidebarElements } from "@/data/sidebarElements";
 import SidebarElement from "./SidebarElement";
-import { ReactNode } from "react";
-
+import { useState } from "react";
+import { RxCross2 } from "react-icons/rx";
 const Sidebar = () => {
-    type element = {
-        name: string;
-        icon: ReactNode;
-        slug:string
+    const [sidebar, setSidebar] = useState(false);
+    const toggleSidebar = () => {
+        setSidebar(!sidebar);
+        console.log(sidebar);
     };
-    const sidebarElements: element[] = [
-        {
-            name: "Karate Course",
-            icon: <FaGraduationCap/>,
-            slug:"karate-course"
-        },
-        {
-            name: "Online karate courses",
-            icon: <FaLaptopHouse/>,
-            slug:"online-karate-course"
-        },
-        {
-            name: "students",
-            icon: <HiMiniUserGroup/>,
-            slug:"/"
-        },
-        {
-            name: "attendences",
-            icon: <FaUserCheck/>,
-            slug:"attendences"
-        },
-        {
-            name: "exam & grading",
-            icon: <PiExamFill/>,
-            slug:"exam&grading"
-        },
-        {
-            name: "notification",
-            icon: <MdNotificationsActive/>,
-            slug:"notification"
-        },
-        {
-            name: "my profile",
-            icon: <FaCircleUser/>,
-            slug:"profile"
-        },
-        {
-            name: "setting",
-            icon: <IoSettingsSharp/>,
-            slug:"setting"
-        },
-        {
-            name: "sign out",
-            icon: <CgLogOut/>,
-            slug:"signout"
-        },
-    ];
     return (
-        <div className="bg-white w-full flex flex-col items-center justify-center rounded-2xl shadow-sm">
-            <div>
-                <Profile />
-            </div>
-            <div className="flex flex-col gap-1 w-full">
-                {sidebarElements.map((element, i) => (
-                    <SidebarElement key={i} slug={element.slug} icon={element.icon} name={element.name}/>
-                ))}
+        <div className=" relative ">
+            <button
+                onClick={toggleSidebar}
+                className="block lg:hidden fixed -left-2 top-20 bg-white px-6 py-2 shadow-md rounded-r-full cursor-pointer z-[200]"
+            >
+                {sidebar ? <RxCross2 size={20} /> : <HiMiniBars3BottomLeft size={20} />}
+            </button>
+            <div
+                className={`w-[20rem] absolute lg:static duration-500 z-[100]  ${
+                    sidebar
+                        ? " -left-1.5 -top-1.5 opacity-100 "
+                        : " -left-[25rem] top-0 opacity-0 lg:opacity-100 "
+                }`}
+            >
+                <div className={`bg-white flex flex-col items-center justify-center shadow-sm pb-10 ${sidebar?" h-screen lg:rounded-2xl":" rounded-2xl"}`}>
+                    <div>
+                        <Profile />
+                    </div>
+                    <div className="flex flex-col gap-1 w-full">
+                        {sidebarElements.map((element, i) => (
+                            <SidebarElement
+                                key={i}
+                                slug={element.slug}
+                                icon={element.icon}
+                                name={element.name}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );

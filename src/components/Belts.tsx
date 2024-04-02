@@ -25,12 +25,12 @@ const Belts = () => {
     ];
     return (
         <div className="relative w-full">
-            <hr className="border-2 w-full border-grayx absolute left-0 top-3 sm:top-6" />
+            <hr className="border-2 w-full border-grayx absolute left-0 top-4 sm:top-6" />
             <div className="flex justify-between absolute top-0 left-0 w-full">
                 {belts.map((belt, i) => (
-                    <div className="z-10 bg-grayx rounded-full p-1" key={i}>
+                    <div className="z-10 bg-grayx rounded-full p-1 first:ring first:ring-yellowx" key={i}>
                         <Image
-                            className="sm:w-10 w-5 overflow-hidden rounded-full"
+                            className="sm:w-10 w-6 overflow-hidden rounded-full"
                             alt="karate belt"
                             src={belt}
                         />

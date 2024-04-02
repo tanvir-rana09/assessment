@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
 
 const sen = Sen({ subsets: ["latin"] });
 
@@ -18,15 +17,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={sen.className}>
+            <body  className={sen.className}>
                 <main className="bg-whitex">
-                    <div >
+                    <div>
                         <Header />
                     </div>
-                    <div className="flex gap-5 sm:p-5 p-2">
-                        <div className="w-[25rem] hidden md:block ">
-                            <Sidebar />
-                        </div>
+                    <div>
                         <div className="w-full">{children}</div>
                     </div>
                 </main>
