@@ -1,12 +1,17 @@
 import Belts from "@/components/Belts";
-import Students from "@/components/Students";
+import Students from "@/components/StudentsTable";
 import Search from "../Search";
 import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 import Filter from "../Filter";
 import Paginate from "../Pagination";
 
 const Aside = () => {
-    const batch1 = {
+    type Batch<T> = {
+        placeholder: string;
+        batches: T[];
+    };
+    
+    const batch1:Batch<string> = {
         placeholder: "Karate Course 22041",
         batches: [
             "Karate Course 22041",
@@ -16,7 +21,7 @@ const Aside = () => {
             "Karate Course 22045",
         ],
     };
-    const batch2 = {
+    const batch2:Batch<string> = {
         placeholder: "Online Courses",
         batches: [
             "Online Courses 22041",
@@ -33,6 +38,7 @@ const Aside = () => {
                     Student
                 </h2>
                 <div className="mb-10">
+                    {/* all belts display here */}
                     <Belts />
                 </div>
             </div>
@@ -53,6 +59,7 @@ const Aside = () => {
                     </div>
                 </div>
                 <div className="mt-5 border rounded-2xl overflow-hidden">
+                    {/* students data table display here */}
                     <Students />
                 </div>
                 <div className="flex items-center pt-4 relative flex-wrap justify-center sm:justify-start">

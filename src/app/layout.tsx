@@ -17,14 +17,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body  className={sen.className}>
+            <body className={sen.className}>
                 <main className="bg-whitex">
                     <div>
                         <Header />
                     </div>
-                    <div>
-                        <div className="w-full">{children}</div>
-                    </div>
+                    <div className="w-full">{children}</div>
                 </main>
             </body>
         </html>

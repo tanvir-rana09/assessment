@@ -2,15 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-}
-
-
+/* coustomize the scrollbar */
 ::-webkit-scrollbar-track
 {
 	background-color: transparent
@@ -102,6 +94,8 @@
         @apply bg-background text-foreground;
     }
 }
+
+
 
 .menu {
 	position: fixed;

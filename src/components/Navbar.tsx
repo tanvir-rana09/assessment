@@ -7,29 +7,11 @@ import profile from "@/assests/rashid.png";
 import { Menu } from "./navbar/Menu";
 import { MenuToggle } from "./navbar/MenuToggle";
 import useMenuAnimation from "./navbar/MenuAnimation";
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const scope = useMenuAnimation(isOpen);
-    type navitem = {
-        name: string;
-    };
-    const navitems: navitem[] = [
-        {
-            name: "Home",
-        },
-        {
-            name: "About",
-        },
-        {
-            name: "Courses",
-        },
-        {
-            name: "Events",
-        },
-        {
-            name: "Contact",
-        },
-    ];
+    
     return (
         <div className="flex justify-between items-center w-full flex-wrap">
             <div>

@@ -5,12 +5,14 @@ import { sidebarElements } from "@/data/sidebarElements";
 import SidebarElement from "./SidebarElement";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
+
 const Sidebar = () => {
     const [sidebar, setSidebar] = useState(false);
     const toggleSidebar = () => {
         setSidebar(!sidebar);
         console.log(sidebar);
     };
+    
     return (
         <div className=" relative ">
             <button

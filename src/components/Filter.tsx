@@ -5,7 +5,6 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import { ReactNode } from "react";
 
 const Filter = ({ batch }: { batch: any }) => {
     return (

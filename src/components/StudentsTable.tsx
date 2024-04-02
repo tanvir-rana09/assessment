@@ -27,7 +27,10 @@ const Students = () => {
                 <TableHeader>
                     <TableRow className="bg-grayx ">
                         {headings.map((heading, i) => (
-                            <TableHead className={`text-center border-r-2 border-white last:border-none`} key={i}>
+                            <TableHead
+                                className={`text-center border-r-2 border-white last:border-none`}
+                                key={i}
+                            >
                                 {heading}
                             </TableHead>
                         ))}
@@ -72,7 +75,13 @@ const Students = () => {
                                 <span>{student.presence}</span>
                                 <span>%</span>
                             </TableCell>
-                            <TableCell className={`text-center ${student.result.includes("pass") ? "text-green-500 font-semibold":""}`}>
+                            <TableCell
+                                className={`text-center ${
+                                    student.result.includes("pass")
+                                        ? "text-green-500 font-semibold"
+                                        : ""
+                                }`}
+                            >
                                 {student.result}
                             </TableCell>
                         </TableRow>
