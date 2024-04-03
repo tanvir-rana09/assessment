@@ -10,8 +10,8 @@ const Aside = () => {
         placeholder: string;
         batches: T[];
     };
-    
-    const batch1:Batch<string> = {
+
+    const batch1: Batch<string> = {
         placeholder: "Karate Course 22041",
         batches: [
             "Karate Course 22041",
@@ -21,7 +21,7 @@ const Aside = () => {
             "Karate Course 22045",
         ],
     };
-    const batch2:Batch<string> = {
+    const batch2: Batch<string> = {
         placeholder: "Online Courses",
         batches: [
             "Online Courses 22041",
@@ -45,7 +45,7 @@ const Aside = () => {
             <div className="mt-28 bg-white rounded-2xl p-3 ">
                 <div className="flex items-center gap-3 flex-wrap justify-center bg-white rounded-2xl ">
                     <div>
-                        <Search />
+                        <Search className="border" />
                     </div>
                     <div className="flex items-center gap-2 border rounded-full px-3 py-1.5">
                         Filter
