@@ -1,9 +1,11 @@
+
+
 import { IoSearch } from "react-icons/io5";
 
 const Search = () => {
     return (
         <label
-            className="flex items-center bg-grayx/50 px-5 py-2 rounded-full"
+            className="flex items-center bg-white border shadow-sm px-5 py-1.5 rounded-full"
             htmlFor="search"
         >
             <input

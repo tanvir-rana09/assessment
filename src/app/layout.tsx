@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-
+import { Suspense } from "react";
+import Loading from "./loading";
 const sen = Sen({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,7 +23,9 @@ export default function RootLayout({
                     <div>
                         <Header />
                     </div>
-                    <div className="w-full">{children}</div>
+                    <Suspense fallback={<Loading />}>
+                        <div className="w-full">{children}</div>
+                    </Suspense>
                 </main>
             </body>
         </html>
