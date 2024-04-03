@@ -45,7 +45,7 @@ const Navbar = () => {
                         </button>
                     </label>
                     <div className="w-10 rounded-full overflow-hidden">
-                        <Image alt="Profile" src={profile} priority />
+                        <Image alt="Profile" src={profile} priority placeholder="blur"/>
                     </div>
                 </div>
                 <div className="lg:hidden block " ref={scope}>
