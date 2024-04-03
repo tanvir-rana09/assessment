@@ -155,3 +155,8 @@
 .toggleBtn path {
 	fill: white;
 }
+@media (min-width: 768px ) {
+    .toggleBtn{
+        top: 18px;
+    }
+ }

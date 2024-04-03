@@ -49,7 +49,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="lg:hidden block " ref={scope}>
-                    <div className="z-10">
+                    <div className="">
                         <Menu className="" />
                     </div>
                     <div className="z-[999]">
