@@ -11,7 +11,7 @@ import useMenuAnimation from "./navbar/MenuAnimation";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const scope = useMenuAnimation(isOpen);
-    const [search, setSearch] = useState(false);
+    const [search, setSearch] = useState(true);
     return (
         <div className="flex justify-between items-center w-full flex-wrap">
             <div>
