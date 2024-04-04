@@ -4,7 +4,7 @@ import {
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select";
+} from "@/components/ui/select"; // shadcn select
 
 const Filter = ({ batch }: { batch: any }) => {
     return (

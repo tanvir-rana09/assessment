@@ -21,6 +21,7 @@ const Search = ({ className }: { className: string }) => {
                 placeholder="Search anything here"
             />
             {!className && (
+               // this is for the navbar component
                 <button
                     onClick={() => setSearch(!search)}
                     className="text-black px-0.5"
@@ -29,6 +30,7 @@ const Search = ({ className }: { className: string }) => {
                 </button>
             )}
             {className && (
+                // this is for table
                 <button className="text-black px-0.5">
                     <IoSearch size={20} /> 
                 </button>

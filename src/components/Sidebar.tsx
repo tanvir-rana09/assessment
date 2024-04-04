@@ -1,7 +1,7 @@
 "use client";
 import Profile from "./Profile";
 import { HiMiniBars3BottomLeft } from "react-icons/hi2";
-import { sidebarElements } from "@/data/sidebarElements";
+import { sidebarElements } from "@/data/sidebarElements"; // import sidebar elements data
 import SidebarElement from "./SidebarElement";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";

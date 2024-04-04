@@ -9,7 +9,7 @@ const Profile = () => {
             </div>
 			<div className="flex flex-col items-center py-5">
 				<p className="text-3xl font-semibold">Adil Rashid</p>
-				<p className="text-gray-500">Sr. Kareta Teacher</p>
+				<p className="text-gray-500">Sr. Karate Teacher</p>
 			</div>
         </div>
     );

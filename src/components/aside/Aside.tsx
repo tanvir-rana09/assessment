@@ -35,7 +35,7 @@ const Aside = () => {
         <div>
             <div className="px-2">
                 <h2 className="uppercase text-2xl md:text-4xl font-semibold mb-5 sm:text-left text-center">
-                    Student
+                    Students
                 </h2>
                 <div className="mb-10">
                     {/* all belts display here */}

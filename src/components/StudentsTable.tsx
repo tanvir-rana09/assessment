@@ -5,11 +5,12 @@ import {
     TableHead,
     TableHeader,
     TableRow,
-} from "@/components/ui/table";
-import { students } from "@/data/data";
+} from "@/components/ui/table"; // import shadcn table component
+import { students } from "@/data/studentsTableData"; // import the students table data
 import Image from "next/image";
 
 const Students = () => {
+    // table headings
     const headings = [
         "No",
         "Profile",
@@ -20,6 +21,7 @@ const Students = () => {
         "Presence",
         "Result",
     ];
+
     return (
         <div className="  overflow-x-scroll">
             <Table className="w-[45rem] md:w-full overflow-x-scroll">
@@ -36,6 +38,7 @@ const Students = () => {
                     </TableRow>
                 </TableHeader>
                 <TableBody>
+                    {/* map the table data */}
                     {students.map((student) => (
                         <TableRow key={student.id}>
                             <TableCell className="text-center">
