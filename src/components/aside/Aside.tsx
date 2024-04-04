@@ -58,7 +58,7 @@ const Aside = () => {
                         <Filter batch={batch2} />
                     </div>
                 </div>
-                <div className="mt-5 border rounded-2xl overflow-hidden">
+                <div className="mt-5 border rounded-2xl overflow-hidden ">
                     {/* students data table display here */}
                     <Students />
                 </div>

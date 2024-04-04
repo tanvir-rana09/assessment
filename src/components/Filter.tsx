@@ -9,8 +9,8 @@ import {
 const Filter = ({ batch }: { batch: any }) => {
     return (
         <div>
-            <Select>
-                <SelectTrigger className="w-[180px]">
+            <Select >
+                <SelectTrigger className="w-[180px] ">
                     <SelectValue placeholder={batch.placeholder} />
                 </SelectTrigger>
                 <SelectContent>

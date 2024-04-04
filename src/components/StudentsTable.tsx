@@ -21,8 +21,8 @@ const Students = () => {
         "Result",
     ];
     return (
-        <div className="flex shrink-1">
-            <Table>
+        <div className="  overflow-x-scroll">
+            <Table className="w-[45rem] md:w-full overflow-x-scroll">
                 <TableHeader>
                     <TableRow className="bg-grayx ">
                         {headings.map((heading, i) => (
@@ -45,17 +45,16 @@ const Students = () => {
                                 <div className=" rounded-full grid place-content-center">
                                     <Image
                                         placeholder="blur"
-                                        className=" rounded-full  object-cover h-10 overflow-hidden w-10"
+                                        className=" rounded-full object-cover h-9 overflow-hidden w-9"
                                         src={student.profile}
                                         alt={student.name}
                                     />
                                 </div>
                             </TableCell>
-                            <TableCell>
+                            <TableCell className="w-[45px]">
                                 <div className=" rounded-full grid place-content-center">
                                     <Image
-                                        placeholder="blur"
-                                        className=" rounded-full  object-cover h-10 overflow-hidden w-10"
+                                        className=" rounded-full  object-cover h-9 overflow-hidden w-9"
                                         src={student.belt}
                                         alt="belt"
                                     />
@@ -64,7 +63,7 @@ const Students = () => {
                             <TableCell className="text-center">
                                 {student.roll}
                             </TableCell>
-                            <TableCell className="text-center ">
+                            <TableCell className="text-center">
                                 {student.name}
                             </TableCell>
                             <TableCell className="text-center flex shrink-0 w-44 mx-auto justify-center">
